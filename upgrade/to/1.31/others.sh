@@ -1,7 +1,5 @@
 #!/bin/sh
 
-export DEBIAN_FRONTEND=noninteractive
-
 wget -O /etc/apt/sources.list.d/kubernetes.list https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/sources/1.31
 apt update && apt -y upgrade
 apt-cache madison kubeadm
