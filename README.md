@@ -21,7 +21,7 @@ curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/
 Ideally, this is your master, if you have just one.
 
 ```
-curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/upgrade/to/[version]/first.sh
+curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/upgrade/to/[version]/first.sh | bash
 ```
 
 
@@ -29,6 +29,5 @@ curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/
 
 
 ```
-curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/upgrade/to/[version]/others.sh
+curl -sL https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/upgrade/to/[version]/others.sh | bash
 ```
-

@@ -25,7 +25,8 @@ systemctl daemon-reload
 systemctl restart kubelet
 
 # Upgrade Calico
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml -O
+kubectl apply --server-side --force-conflicts -f tigera-operator.yaml
 wget https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/custom-resources.yaml -O custom-resources.yaml
 kubectl apply -f custom-resources.yaml
 
