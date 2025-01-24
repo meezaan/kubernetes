@@ -23,3 +23,14 @@ apt-mark hold kubelet kubectl
 
 systemctl daemon-reload
 systemctl restart kubelet
+
+# Upgrade Calico
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
+wget https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/custom-resources.yaml -O custom-resources.yaml
+kubectl apply -f custom-resources.yaml
+
+# Upgrade calicoctl
+wget https://github.com/projectcalico/calico/releases/download/v3.29.1/calicoctl-linux-amd64 -O calicoctl
+chmod +x ./calicoctl
+sudo mv calicoctl /usr/bin/
+calicoctl node status
