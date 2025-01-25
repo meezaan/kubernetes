@@ -5,13 +5,13 @@
 ### Master
 
 ```
-curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/install/[version]/master.sh && sh [hostname] [control_plane_endpoint] [service_dns_domain] && rm master.sh
+curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/install/[version]/master.sh && sh master.sh [hostname] [control_plane_endpoint] [service_dns_domain] && rm master.sh
 ```
 
 ### Worker
 
 ```
-curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/install/[version]/worker.sh && sh workers.sh [hostname] && rm worker.sh
+curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/install/[version]/worker.sh && sh worker.sh [hostname] && rm worker.sh
 ```
 
 ## Upgrade

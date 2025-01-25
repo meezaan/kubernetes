@@ -88,6 +88,8 @@ kubectl apply -f custom-resources.yaml
 wget https://github.com/projectcalico/calico/releases/download/v3.29.1/calicoctl-linux-amd64 -O calicoctl
 chmod +x ./calicoctl
 sudo mv calicoctl /usr/bin/
+
+sleep 7
 calicoctl node status
 
 # Enable encryption for Calico communication between nodes
