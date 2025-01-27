@@ -1,8 +1,6 @@
 #!/bin/sh
 
 server_hostname=$1
-control_plane_endpoint=$2
-service_dns_domain=$3
 
 # Setup hostname
 hostnamectl set-hostname $server_hostname
