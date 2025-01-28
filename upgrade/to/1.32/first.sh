@@ -2,6 +2,8 @@
 
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 wget -O /etc/apt/sources.list.d/kubernetes.list https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/sources/1.32
+wget -O /etc/containerd/config.toml https://raw.githubusercontent.com/meezaan/kubernetes/master/etc/containerd/config.toml
+wget -O /etc/crictl.yaml https://raw.githubusercontent.com/meezaan/kubernetes/master/etc/crictl.yaml
 apt update && apt -y upgrade
 apt-cache madison kubeadm
 
