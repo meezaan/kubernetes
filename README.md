@@ -31,3 +31,11 @@ curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master
 ```
 curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/upgrade/to/[version]/others.sh && sh others.sh && rm others.sh
 ```
+
+### DNS Resolution
+
+To change DNS Resolver to Cloudflare and Google, run:
+
+```
+curl -sLO https://raw.githubusercontent.com/meezaan/kubernetes/refs/heads/master/systemd-resolve/execute.sh && sh execute.sh && rm execute.sh
+```
